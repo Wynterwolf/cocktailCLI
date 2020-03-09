@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/environment"
+
+puts "This is your ruby file!"
+
+#call new instance
+
+CocktailCLI::CLI.new.call

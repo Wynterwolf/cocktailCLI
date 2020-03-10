@@ -6,9 +6,9 @@ def self.fetch(term)
     response = HTTParty.get(url)
 
     response["drinks"].each do |drink|
-        drink = drink["strDrink"]
-
-        CocktailCLI::Drink.new(drink)
+        #drink = drink["strDrink"]
+        puts drink["strDrink"]
+        #CocktailCLI::Drink.new(drink)
 
 
         #binding.pry

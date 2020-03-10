@@ -4,10 +4,10 @@ class CocktailCLI::Drink
     
 @@all = []
 
-    def initialize(drinks)
+    def initialize(drinks, instructions)
     
         @term = term
-        @drink = drink
+        @drinks = drinks
         @@all << self
     end
 

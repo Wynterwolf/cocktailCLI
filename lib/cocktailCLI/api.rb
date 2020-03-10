@@ -5,9 +5,16 @@ def self.fetch(term)
     url = "https://www.thecocktaildb.com/api/json/v1/#{key}/search.php?s=#{term}"
     response = HTTParty.get(url)
 
-    response["drinks"].each do |d|
-         #puts what here? 
-    binding.pry
+    response["drinks"].each do |drink|
+        #puts "------------------------------"
+        
+        drinks = drink["strDrink"]
+        instructions = drink["strInstructions"]
+
+        CocktailCLI::Drink.new(drinks, instructions)
+        #sleep (2)
+
+        binding.pry
     end
 end
 end

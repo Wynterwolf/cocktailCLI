@@ -1,15 +1,13 @@
-#search terms
-
 class CocktailCLI::Term
 
     attr_accessor :term
     
 @@all = []
 
-    def initialize(margarita)
+    def initialize(term)
     
         @term = term
-        @drink = drink
+        @drinks = drinks
         @@all << self
     end
 

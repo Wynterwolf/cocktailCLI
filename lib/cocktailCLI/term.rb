@@ -7,7 +7,6 @@ class CocktailCLI::Term
     def initialize(term)
     
         @term = term
-        @drinks = drinks
         @@all << self
     end
 

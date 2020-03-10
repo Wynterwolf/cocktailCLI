@@ -1,13 +1,12 @@
 class CocktailCLI::Drink
 
-    attr_accessor :drinks, :term
+    attr_accessor :drink
     
 @@all = []
 
-    def initialize(drinks, instructions)
+    def initialize(drink)
     
-        @term = term
-        @drinks = drinks
+        @drink = drink
         @@all << self
     end
 

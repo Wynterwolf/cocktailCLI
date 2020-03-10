@@ -6,15 +6,12 @@ def self.fetch(term)
     response = HTTParty.get(url)
 
     response["drinks"].each do |drink|
-        #puts "------------------------------"
-        
-        drinks = drink["strDrink"]
-        instructions = drink["strInstructions"]
+        drink = drink["strDrink"]
 
-        CocktailCLI::Drink.new(drinks, instructions)
-        #sleep (2)
+        CocktailCLI::Drink.new(drink)
 
-        binding.pry
+
+        #binding.pry
     end
 end
 end

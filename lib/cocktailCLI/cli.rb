@@ -10,9 +10,9 @@ class CocktailCLI::CLI
         puts "(1)You can search by drink name!"
         # sleep(2)
         puts "--------------------------------------------"
-        puts "(2)You can search by letter!"
-        # sleep(2)
-        puts "--------------------------------------------"
+        # puts "(2)You can search by letter!"
+        # # sleep(2)
+        # puts "--------------------------------------------"
         # puts "(3)Learn about a particular alcohol!"
         # puts "--------------------------------------------"
         # sleep(2)
@@ -32,17 +32,29 @@ class CocktailCLI::CLI
             puts "#{index}. #{d.drink}"
             puts "--------------------------------------------"
         end
-    when "2"
-        puts "You chose to search by letter..."
-        puts "--------------------------------------------"
-        puts "Please choose a letter ..."
+            puts "Would you like to see more details on a specific drink?"
+            puts "Please choose one from the list above."
+        
         term = gets.chomp.downcase
-        CocktailCLI::API.fetch_two(term)
+        CocktailCLI::API.fetch(term) 
 
-        CocktailCLI::Drink.all.each.with_index(1) do |d, index|
-            puts "#{index}. #{d.drink}"
-            puts "--------------------------------------------"
-        end
+
+
+
+
+
+
+    # when "2"
+    #     puts "You chose to search by letter..."
+    #     puts "--------------------------------------------"
+    #     puts "Please choose a letter ..."
+    #     term = gets.chomp.downcase
+    #     CocktailCLI::API.fetch_two(term)
+
+    #     CocktailCLI::Drink.all.each.with_index(1) do |d, index|
+    #         puts "#{index}. #{d.drink}"
+    #         puts "--------------------------------------------"
+    #     end
     # when "3"
     #     puts "You chose to research an alcohol..."
     #     puts "--------------------------------------------"
@@ -65,8 +77,8 @@ class CocktailCLI::CLI
     #         puts "#{alcohol[strDescription]}"
 
     #     end
-    else 
-        exit
+    # else 
+        # exit
     end
 
 

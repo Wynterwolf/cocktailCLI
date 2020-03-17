@@ -36,8 +36,8 @@ class CocktailCLI::CLI
             puts "Please choose one from the list above."
         
         term = gets.chomp.downcase
-        CocktailCLI::API.fetch(term) 
-
+        CocktailCLI::API.fetch_two(term) 
+            puts
 
 
 

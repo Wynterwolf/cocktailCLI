@@ -15,17 +15,17 @@ def self.fetch(term)
     end
 end
 
-# def self.fetch_two(term)
-#     key = "1"
-#     url = "https://www.thecocktaildb.com/api/json/v1/#{key}/search.php?f=#{term}"
-#     response = HTTParty.get(url)
+def self.fetch_two(term)
+    key = "1"
+    url = "https://www.thecocktaildb.com/api/json/v1/#{key}/search.php?s=#{term}"
+    response = HTTParty.get(url)
 
-#     response["drinks"].each do |drink|
-#         drink = drink["strDrink"]
-#         puts drink["strDrink"]
-#         CocktailCLI::Drink.new(drink)
-#     end
-# end
+    response["drinks"].each do |info|
+        info = drinks["strInstructions"]
+        puts drink["strInstructions"]
+        #CocktailCLI::Drink.new(drink)
+    end
+end
 
 # def self.fetch_three(term)
 #     key = "1"

@@ -12,5 +12,5 @@ require "httparty"
 
 module Cocktailcli
   class Error < StandardError; end
-  # Your code goes here...
+  puts "ERROR ERROR ERROR"
 end

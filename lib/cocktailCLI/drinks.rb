@@ -1,11 +1,11 @@
 class CocktailCLI::Drink
 
-    attr_accessor :drink
+    attr_accessor :drink, :instructions
     
 @@all = []
 
-    def initialize(drink)
-    
+    def initialize(drink, instructions)
+        @instructions = instructions
         @drink = drink
         @@all << self
     end

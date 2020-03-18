@@ -32,12 +32,16 @@ class CocktailCLI::CLI
         term = gets.chomp.to_i
         index = term -1
         drink = CocktailCLI::Drink.all[index]
-        #puts drink.instructions
-        if drink.class != index
-            raise NameError
+        # puts drink.instructions
+        
+        if term != index
+            puts "That number was not listed, choose again."
+            #return to case choice
         else
             puts drink.instructions 
-
+            puts "--------------------------------------------"
+            put "Would you like to search again?"
+            #return to case choice
             
 
     end
@@ -46,7 +50,7 @@ class CocktailCLI::CLI
     end
 end
 
-    class NameError < StandardError
-    end
+    # class NameError < StandardError
+    # end
 
 end
